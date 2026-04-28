@@ -20,9 +20,11 @@
 - LLMs undergo long sessions of training using huge chunks of data hence the name 'large', trying to imitate our natural language as much as possible hence the name 'language', with out being explicitly coded hence named a ml 'model'. we call this a base model which is trained to predict next word.
 - The second stage before an LLM can be commercially used is called 'Fine-tuning' stage, this is where the power of predicting next token/word is actually gets useful for users. Fine tuning is a process of changing the way an LLM acts through labeling instructions, LLM gets fed with labelled instructions from either a very large group of experts or orgnaizations like scale.ai etc..
 - For instance say an LLM to act as an virtual assistant gets fed with chunks of expert Q&A writings, to format its output both explicit system prompts and labeled data.
-- Since a model which has been trained on experts data gets only as good as the best human out there, and to best this a type of self improvement is needed which is achieved through RLHF (Reinforcement Learning Human Feedback)
+- Since a model which has been trained on experts data gets only as good as the best human out there, and to best this a type of self improvement is needed which is achieved through RLHF (Reinforcement Learning Human Feedback). But LLMs specifically doesn't have a explicit reward analogy here hence human intervention is needed.
+- After getting the fine-tuned model, RLHF is used to repeated improve the performance of the commercial model.
 
 ## Analogy
+
 
 ## How it connects to AI Engineering
 
