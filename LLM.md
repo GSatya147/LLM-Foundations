@@ -27,18 +27,18 @@ Step-2 (Tokenisation): Sentences to tokens
 Step-3: Tokens to vector embeddings
 
 Step-4: Attention Mechanism
-A(Q, K, V) = Softmax(Transpose(K).Q/(Sqrt(dk)))
+A(Q, K, V) = Softmax(Q.Transpose(T)/(Sqrt(dk))).V
 Q = Query vectors
 K = Key vectors
 V = Value vectors
 Transpose(K).Q = Is nothing but the context grid, hence O(n^2)
-dk = temperature constant introduced
+dk = temperature constant/scaling factor introduced
 
 - Techniques like masking are used, if applicable
 
 Step-5: MLP/feed forward layer (Linear -> Non-linear(ReLU, GeLU) -> Linear -> Sum(MLP output + input))
 
-Step-6: Repetitions of steps 4 & 5 (multi heads)
+Step-6: Repetitions of steps 4 & 5 
 
 Step-7: Softmax probability distribution on last most vector embedding 
 Softmax = (e^x/T)/Sum(e^n/T) from n = 0 to n-1
@@ -62,7 +62,7 @@ T is temperature constant
 ## Key capabilities
  - Can generate texts
  - Can process audio/video/img inputs (Multi-Modal capabilities)
- - Can use pre existing tools like browser, calculator, terminal, interpreters/compilers through ethernet
+ - Can use pre existing tools like browser, calculator, terminal, interpreters/compilers through APIs, MCPs
  - Can talk with other LLMs
  - Can manage memory/disk related tasks
 ## Security and failure modes
