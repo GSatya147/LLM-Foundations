@@ -2,7 +2,11 @@
 BPE Implementation - Byte Pair Encoding
 - Compressing data for much shorter lengths of contexts and shorter vocabulary table
 
-step-1: 
+process:
+Step-1: Iterate and check for most occuring byte pairs in a sequence
+Step-2: Replace the most occured byte pairs with a new token
+Step-3: Recursicely repeat the process until no byte pairs are left to be replaced
+
 """
 
 text: str = "aaabdaaabac"
