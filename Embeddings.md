@@ -8,4 +8,6 @@
 - Representing people & things as vectors of numbers (high dimensions) - word embeddings
 - Calculating how similar two vectors are high-positive being the most similar 
 
+* We use cosine similarity cus we only need direction for semantics, learning magnitude doesn't help eg: word occuring frequently in data has large magnitude doesn't mean it's simlar to everything
+* The smaller the angle the closer they are pointing hence cosine close to 1, and 0 if perpendicular and if in opposite direction it's negative.
 
